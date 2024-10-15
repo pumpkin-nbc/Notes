@@ -10,7 +10,7 @@ docker run -d \
            redis:latest redis-server /etc/redis/redis.conf
 ```
 
-```editorconfig
+```text
 # redis-7.4.conf
 # Redis 配置文件示例。
 #
