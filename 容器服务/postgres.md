@@ -28,6 +28,16 @@ docker run -d \
            postgres:latest -c 'config_file=/etc/postgresql/postgresql.conf'
 ```
 
+```postgresql
+-- 创建用户
+CREATE USER newuser WITH PASSWORD 'password';
+-- 新建newdb数据库并赋权给newuser
+CREATE DATABASE newdb OWNER newuser;
+-- newdb数据库赋权给newuser
+GRANT ALL PRIVILEGES ON DATABASE newdb TO newuser;
+-- olddb数据库撤销赋权给newuser
+REVOKE ALL PRIVILEGES ON DATABASE olddb FROM newuser;
+```
 
 
 ```text
