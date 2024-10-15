@@ -36,7 +36,11 @@ CREATE DATABASE newdb OWNER newuser;
 -- newdb数据库赋权给newuser
 GRANT ALL PRIVILEGES ON DATABASE newdb TO newuser;
 -- olddb数据库撤销赋权给newuser
-REVOKE ALL PRIVILEGES ON DATABASE olddb FROM newuser;
+REVOKE ALL PRIVILEGES ON DATABASE newdb FROM newuser;
+-- 删除数据库
+DROP DATABASE IF EXISTS newdb;
+-- 删除用户
+DROP USER IF EXISTS newuser;
 ```
 
 
