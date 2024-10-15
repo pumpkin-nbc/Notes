@@ -35,6 +35,7 @@ CREATE USER newuser WITH PASSWORD 'password';
 CREATE DATABASE newdb OWNER newuser;
 -- newdb数据库赋权给newuser
 GRANT ALL PRIVILEGES ON DATABASE newdb TO newuser;
+GRANT ALL PRIVILEGES ON SCHEMA schema_name TO newuser;
 -- olddb数据库撤销赋权给newuser
 REVOKE ALL PRIVILEGES ON DATABASE newdb FROM newuser;
 -- 删除数据库
