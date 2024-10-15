@@ -1,5 +1,6 @@
 # portainer
 ```shell
+# 可选普通版 portainer/portainer-ce:latest 企业版 portainer/portainer-ee:latest
 # http部署
 docker run -d \
            --name portainer \
