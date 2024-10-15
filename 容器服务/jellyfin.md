@@ -16,13 +16,13 @@ docker run -d \
            # 使用特殊网络连接 或者 修改hosts文件 来访问插件仓库 二选一即可
            -e HTTP_PROXY=http://ip:port \
            -e HTTPS_PROXY=http://ip:port \
-           -v /volume1/docker/jellyfin/hosts:/etc/hosts \
+           -v /data/docker/jellyfin/hosts:/etc/hosts \
            # 修改系统自带的字体
            -v /data/docker/jellyfin/dejavu:/usr/share/fonts/truetype/dejavu \
            # 增加备用字体
            -v /data/docker/jellyfin/Fonts:/Fonts \
            # 增加https证书配置
-           -v /volume2/docker/jellyfin/certs:/certs \
+           -v /data/docker/jellyfin/certs:/certs \
            # intel/amd gpu解码映射
            --device /dev/dri/renderD128:/dev/dri/renderD128 \
            # nvidia gpu解码映射
