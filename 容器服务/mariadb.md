@@ -18,6 +18,17 @@ docker run -d \
            mariadb:latest
 ```
 
+```mariadb
+# 创建新数据库
+CREATE DATABASE newdb;
+# 创建新用户
+CREATE USER 'newuser'@'%' IDENTIFIED BY 'password';
+# 赋权
+GRANT ALL PRIVILEGES ON newdb.* TO 'newuser'@'%';
+FLUSH PRIVILEGES;
+# 撤销
+REVOKE ALL PRIVILEGES ON newdb.* FROM 'example_user';
+```
 ```text
 # mariadb.cnf
 # MariaDB 配置文件
