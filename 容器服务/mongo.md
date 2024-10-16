@@ -17,6 +17,11 @@ docker run -d \
            mongo:latest --config /etc/mongo/mongod.conf
 ```
 
+```sql
+use admin
+db.updateUser("newuser", { pwd: "newPassword" })
+```
+
 ```shell
 # mongod.conf
 
