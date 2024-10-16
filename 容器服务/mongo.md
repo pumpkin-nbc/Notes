@@ -14,7 +14,6 @@ docker run -d \
            -e MONGO_INITDB_ROOT_PASSWORD_FILE=/run/secrets/mongo-root \
            -v /data/docker/mongo/data:/data/db \
            -v /data/docker/mongo/conf/mongod.conf:/etc/mongo/mongod.conf \
-           -v /data/docker/mongo/logs:/var/log/mongodb \
            mongo:latest --config /etc/mongo/mongod.conf
 ```
 
@@ -31,10 +30,10 @@ storage:
   #wiredTiger:
 
 # 在何处写入日志记录数据.
-systemLog:
-  destination: file
-  logAppend: true
-  path: /var/log/mongodb/mongod.log
+#systemLog:
+  #destination: file
+  #logAppend: true
+  #path: /var/log/mongodb/mongod.log
 
 # 网络接口
 net:
